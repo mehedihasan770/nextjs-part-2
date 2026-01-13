@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+/* আপনার শুধু ২টি ক্লাস */
+.primary-color {
+  color: #7c3aed;
+}
+
+.secondary-color {
+  color: #06b6d4;
+}
