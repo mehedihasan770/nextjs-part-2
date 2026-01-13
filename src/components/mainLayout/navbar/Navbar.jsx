@@ -31,7 +31,7 @@ const Navbar = () => {
             </Link>
             
             <Link href="/all-models" className="text-gray-700 hover:text-[#7c3aed] font-medium transition-colors duration-200 relative group">
-              All Assets
+              All Models
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7c3aed] group-hover:w-full transition-all duration-300"></span>
             </Link>
             
@@ -66,7 +66,7 @@ const Navbar = () => {
               
               <Link href="/all-models" className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-purple-50">
                 <div className="w-2 h-2 rounded-full bg-[#7c3aed]"></div>
-                <span className="font-medium text-gray-700">All Assets</span>
+                <span className="font-medium text-gray-700">All Models</span>
               </Link>
               
               <Link href="/login" className="block py-3 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white rounded-lg font-semibold text-center shadow-lg">
