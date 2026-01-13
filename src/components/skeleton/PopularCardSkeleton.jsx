@@ -1,12 +1,10 @@
-const SkeletonLoader = () => {
-  const skeletonArray = Array(8).fill(null);
+import React from 'react';
+
+const PopularCardSkeleton = () => {
+  const skeletonArray = Array(4).fill(null);
 
   return (
     <div>
-      <div className="mb-8 text-center">
-        <div className="h-8 bg-gray-200 rounded w-48 mx-auto mb-3"></div>
-        <div className="h-4 bg-gray-200 rounded w-64 mx-auto"></div>
-      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
         {skeletonArray.map((_, index) => (
@@ -49,6 +47,6 @@ const SkeletonLoader = () => {
       </div>
     </div>
   );
-};
+}
 
-export default SkeletonLoader;
+export default PopularCardSkeleton;

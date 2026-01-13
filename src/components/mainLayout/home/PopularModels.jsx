@@ -1,19 +1,21 @@
-// import Title from '@/components/sheared/Title';
 import { FetchItems } from '@/lib/FetchItems';
-import { ShoppingCart, Star, User } from 'lucide-react';
+import React from 'react';
+import { Star, User } from 'lucide-react';
+import Title from '@/components/sheared/Title';
+import Link from 'next/link';
+import PopularCardSkeleton from '@/components/skeleton/PopularCardSkeleton';
 
-const Cards = async () => {
-    const products = await FetchItems();
-
+const PopularModels = async () => {
+    const products = await FetchItems()
     const formatPrice = (price) => {
         return `$${parseFloat(price).toFixed(2)}`;
     };
-
     return (
         <div>
-            <div>
+            <Title>Popular Models</Title>
+                {products.length === 0 ? <PopularCardSkeleton/> : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-                    {products?.map((product) => (
+                    {products?.slice(0, 4)?.map((product) => (
                         <div 
                             key={product._id}
                             className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
@@ -78,32 +80,14 @@ const Cards = async () => {
                             </div>
                         </div>
                     ))}
+                </div>)}
+                <div className='flex justify-center mt-5'>
+                    <Link href={'/all-models'} className="px-6 py-2.5 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
+                        Load More
+                    </Link>
                 </div>
-
-                {(!products || products.length === 0) && (
-                    <div className="text-center py-12">
-                        <div className="w-20 h-20 mx-auto mb-4 bg-linear-to-r from-[#7c3aed]/10 to-[#06b6d4]/10 rounded-full flex items-center justify-center">
-                            <ShoppingCart className="w-10 h-10 text-gray-400" />
-                        </div>
-                        <h3 className="text-xl font-semibold text-gray-700 mb-2">
-                            No Models Found
-                        </h3>
-                        <p className="text-gray-500 max-w-md mx-auto">
-                            Check back soon for new models
-                        </p>
-                    </div>
-                )}
-
-                {products && products.length > 0 && (
-                    <div className="text-center mt-8">
-                        <button className="px-6 py-2.5 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
-                            Load More
-                        </button>
-                    </div>
-                )}
-            </div>
         </div>
     );
 };
 
-export default Cards;
+export default PopularModels;

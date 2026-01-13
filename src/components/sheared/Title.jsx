@@ -2,9 +2,9 @@ import React from 'react';
 
 const Title = ({ children }) => {
     return (
-        <div className='text-center mb-12'>
+        <div className='text-center pb-10'>
             <div className="relative inline-block">
-                <div className="text-5xl absolute -inset-10 bg-linear-to-r from-[#7c3aed]/20 to-[#06b6d4]/20 blur-xl rounded-full -z-10"></div>
+                <div className="text-5xl absolute -inset-5 bg-linear-to-r from-[#7c3aed]/20 to-[#06b6d4]/20 blur-xl rounded-full -z-10"></div>
                 <h1 className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold'>
                     {children}
                 </h1>
