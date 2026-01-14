@@ -1,6 +1,7 @@
 // import Title from '@/components/sheared/Title';
 import { FetchItems } from '@/lib/FetchItems';
 import { ShoppingCart, Star, User } from 'lucide-react';
+import Link from 'next/link';
 
 const Cards = async () => {
     const products = await FetchItems();
@@ -71,10 +72,9 @@ const Cards = async () => {
                                         </span>
                                     </div>
                                 </div>
-
-                                <button className="w-full py-2.5 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm">
-                                    Add to Cart
-                                </button>
+                                <Link href={`/details/${product._id}`} className="py-2.5 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm">
+                                    <button className='w-full cursor-pointer'>View Details</button>
+                                </Link>
                             </div>
                         </div>
                     ))}
@@ -91,14 +91,6 @@ const Cards = async () => {
                         <p className="text-gray-500 max-w-md mx-auto">
                             Check back soon for new models
                         </p>
-                    </div>
-                )}
-
-                {products && products.length > 0 && (
-                    <div className="text-center mt-8">
-                        <button className="px-6 py-2.5 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
-                            Load More
-                        </button>
                     </div>
                 )}
             </div>

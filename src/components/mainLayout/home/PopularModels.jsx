@@ -15,7 +15,7 @@ const PopularModels = async () => {
             <Title>Popular Models</Title>
                 {products.length === 0 ? <PopularCardSkeleton/> : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-                    {products?.slice(0, 4)?.map((product) => (
+                    {products?.slice(0, 8)?.map((product) => (
                         <div 
                             key={product._id}
                             className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
@@ -74,9 +74,9 @@ const PopularModels = async () => {
                                     </div>
                                 </div>
 
-                                <button className="w-full py-2.5 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm">
-                                    Add to Cart
-                                </button>
+                                <Link href={`/details/${product._id}`} className="py-2.5 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm">
+                                    <button className='w-full cursor-pointer'>View Details</button>
+                                </Link>
                             </div>
                         </div>
                     ))}

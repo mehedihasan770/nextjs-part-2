@@ -1,5 +1,6 @@
 "use client";
 
+import { Award } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -7,20 +8,26 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/50 backdrop-blur-3xl shadow">
       <div className="max-w-11/12 md:max-w-10/12 lg:max-w-9/12 mx-auto">
         <div className="flex justify-between items-center h-20">
           
           <div className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-14 h-14 bg-linear-to-br from-[#7c3aed] to-[#06b6d4] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                <span className="text-white font-bold text-2xl">3D</span>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#06b6d4] rounded-full animate-pulse"></div>
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <div className="w-12 h-12 bg-linear-to-r from-[#7c3aed] to-[#06b6d4] rounded-xl flex items-center justify-center transform rotate-3 shadow-lg">
+                  <span className="text-white font-bold text-2xl">3D</span>
+                </div>
+                <div className="absolute -top-1 -right-1 w-5 h-5 bg-linear-to-r from-purple-500 to-cyan-400 rounded-full flex items-center justify-center">
+                  <Award className="w-3 h-3 text-white" />
+                </div>
               </div>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold primary-color">Nexus3D</h1>
-              <p className="text-xs text-gray-500">Premium 3D Models</p>
+              <div>
+                <h2 className="text-3xl font-bold bg-linear-to-r from-[#7c3aed] to-[#06b6d4] bg-clip-text text-transparent">
+                  Nexus3D
+                </h2>
+                <p className="text-sm text-gray-400 font-medium">Premium 3D Models</p>
+              </div>
             </div>
           </div>
 
@@ -57,7 +64,7 @@ const Navbar = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-t border-gray-100 shadow-lg">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-3xl border-t shadow">
             <div className="w-10/12 mx-auto py-6 space-y-4">
               <Link href="/" className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-purple-50">
                 <div className="w-2 h-2 rounded-full bg-[#7c3aed]"></div>
