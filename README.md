@@ -47,10 +47,27 @@ The application contains a total of **4 main routes**:
 
 ---
 
-## Setup & Installation Instructions
+<h2>How to Run Locally</h2>
 
-Follow the steps below to run the project locally:
+<p>Follow these steps to run the project on your local machine:</p>
 
-### 1. Clone the repository
-```bash
-git clone <repository-url>
+<ol>
+  <li>Clone the repository:
+    <pre><code>git clone https://github.com/mehedihasan770/nextjs-part-2.git</code></pre>
+  </li>
+  <li>Navigate to the project directory:
+    <pre><code>cd nextjs-part-2</code></pre>
+  </li>
+  <li>Install dependencies:
+    <pre><code>npm install</code></pre>
+  </li>
+  <li>Start the frontend:
+    <pre><code>npm run dev</code></pre>
+  </li>
+</ol>
+
+<h2>Live & Relevant Links</h2>
+
+<ul>
+  <li>🌐Live Link <a href="https://home-hero-999.netlify.app/" target="_blank">https://nexus3d.vercel.app/</a></li>
+</ul>
