@@ -69,5 +69,5 @@ The application contains a total of **4 main routes**:
 <h2>Live & Relevant Links</h2>
 
 <ul>
-  <li>🌐Live Link <a href="https://home-hero-999.netlify.app/" target="_blank">https://nexus3d.vercel.app/</a></li>
+  <li>🌐Live Link <a href="https://nexus3d.vercel.app/" target="_blank">https://nexus3d.vercel.app/</a></li>
 </ul>
